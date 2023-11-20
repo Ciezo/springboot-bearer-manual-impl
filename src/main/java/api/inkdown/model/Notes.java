@@ -2,6 +2,9 @@ package api.inkdown.model;
 
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
@@ -16,11 +19,11 @@ public class Notes {
     private String author;
     private String title;
     private String body;
-    private String date_posted;
+    private LocalDate date_posted;
 
     public Notes() {}
 
-    public Notes(long note_id, long user_id, String author, String title, String body, String date_posted) {
+    public Notes(long note_id, long user_id, String author, String title, String body, LocalDate date_posted) {
         this.note_id = note_id;
         this.user_id = user_id;
         this.author = author;
@@ -69,11 +72,9 @@ public class Notes {
         this.body = body;
     }
 
-    public String getDate_posted() {
-        return date_posted;
-    }
+    public LocalDate getDate_posted() { return LocalDate.now();}
 
-    public void setDate_posted(String date_posted) {
+    public void setDate_posted(LocalDate date_posted) {
         this.date_posted = date_posted;
     }
 
