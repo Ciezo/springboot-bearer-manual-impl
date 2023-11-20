@@ -95,7 +95,7 @@ public class NotesController {
     }
 
     // Delete note by note_id
-    @RequestMapping(value = "/api/inkdown/note/delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/inkdown/note/{id}", method = RequestMethod.DELETE)
     public void removeNote(@RequestHeader("Authorization") String auth, @PathVariable long id) {
         /**
          * @param id must be present
