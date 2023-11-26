@@ -42,7 +42,7 @@ public class NotesController {
     }
 
     // Post note
-    @PostMapping(value = "/api/inkdown/add-note", method = RequestMethod.POST)
+    @PostMapping(value = "/api/inkdown/add-note")
     public Notes saveNote(@RequestHeader("Authorization") String auth,  @RequestBody Notes note) {
         /**
          * @body Notes model
@@ -58,7 +58,7 @@ public class NotesController {
     }
 
     // Put note
-    @PutMapping(value = "/api/inkdown/update-note/n/{note_id}/u/{user_id}", method = RequestMethod.PUT)
+    @PutMapping(value = "/api/inkdown/update-note/n/{note_id}/u/{user_id}")
     public Notes patchNote(@RequestHeader("Authorization") String auth,  @RequestBody Notes note,
                            @PathVariable long note_id, @PathVariable long user_id) {
         /**
@@ -94,7 +94,7 @@ public class NotesController {
     }
 
     // Delete note by note_id
-    @DeleteMapping(value = "/api/inkdown/note/{id}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/api/inkdown/note/{id}")
     public void removeNote(@RequestHeader("Authorization") String auth, @PathVariable long id) {
         /**
          * @param id must be present
