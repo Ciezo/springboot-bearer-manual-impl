@@ -1,9 +1,6 @@
 package api.inkdown.model;
 
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
-import org.springframework.cglib.core.Local;
-
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -83,7 +80,12 @@ public class Notes {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Notes notes = (Notes) o;
-        return note_id == notes.note_id && user_id == notes.user_id && author.equals(notes.author) && title.equals(notes.title) && body.equals(notes.body) && date_posted.equals(notes.date_posted);
+        return note_id == notes.note_id &&
+                user_id == notes.user_id &&
+                author.equals(notes.author) &&
+                title.equals(notes.title) &&
+                body.equals(notes.body) &&
+                date_posted.equals(notes.date_posted);
     }
 
     @Override
