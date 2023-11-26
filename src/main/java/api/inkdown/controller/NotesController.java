@@ -20,7 +20,7 @@ public class NotesController {
     private final static String SECURE_KEY = SecureKeys.getApiKeys().trim();
 
     // Get all notes resources
-    @RequestMapping("/api/inkdown/notes")
+    @GetMapping("/api/inkdown/notes")
     public ResponseEntity<?> fetchAllNotes(@RequestHeader("Authorization") String auth) {
         /**
          * @note Fetch all notes contents
@@ -42,7 +42,7 @@ public class NotesController {
     }
 
     // Post note
-    @RequestMapping(value = "/api/inkdown/add-note", method = RequestMethod.POST)
+    @PostMapping(value = "/api/inkdown/add-note", method = RequestMethod.POST)
     public Notes saveNote(@RequestHeader("Authorization") String auth,  @RequestBody Notes note) {
         /**
          * @body Notes model
@@ -58,7 +58,7 @@ public class NotesController {
     }
 
     // Put note
-    @RequestMapping(value = "/api/inkdown/update-note/n/{note_id}/u/{user_id}", method = RequestMethod.PUT)
+    @PutMapping(value = "/api/inkdown/update-note/n/{note_id}/u/{user_id}", method = RequestMethod.PUT)
     public Notes patchNote(@RequestHeader("Authorization") String auth,  @RequestBody Notes note,
                            @PathVariable long note_id, @PathVariable long user_id) {
         /**
@@ -76,7 +76,7 @@ public class NotesController {
     }
 
     // Get note by note_id
-    @RequestMapping(value = "/api/inkdown/note/{id}")
+    @GetMapping(value = "/api/inkdown/note/{id}")
     public Notes fetchNote(@RequestHeader("Authorization") String auth, @PathVariable long id) {
         /**
          * @param id must be present
@@ -94,7 +94,7 @@ public class NotesController {
     }
 
     // Delete note by note_id
-    @RequestMapping(value = "/api/inkdown/note/{id}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/api/inkdown/note/{id}", method = RequestMethod.DELETE)
     public void removeNote(@RequestHeader("Authorization") String auth, @PathVariable long id) {
         /**
          * @param id must be present
