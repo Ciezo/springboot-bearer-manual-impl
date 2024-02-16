@@ -11,14 +11,6 @@
 Inkdown is an in-browser text editor for your simple productive notes needs.
 It is created with PHP for fast, lightweight, and efficient note-taking experience.
 
-<h4>Features</h4>
-
-- User registration
-- User authentication
-- Page navigation
-- Forms 
-- Validations
-
 <b>Checkout the repository!<b>
 <a href="https://github.com/Ciezo/inkdown">Inkdown text-editor</a>
 
