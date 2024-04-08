@@ -1,17 +1,5 @@
-# Inkdown RESTful api using Spring Boot
+# Extracting Bearer Tokens Manually
 
-<p align="center">https://inkdown-editor-85260732e1ff.herokuapp.com/</p>
+This project helps to understand how to manually extract Bearer tokens from Headers. I did this because I want to learn and know more about Authentication and Bearer Tokens. I know it is not the best code, but I have moved on from this little project as my personal interest and experiment. I am glad that now I learned to use Spring Security 6 and JWTs to secure endpoints and Spring Boot backend applications. 
 
-<div>
-    An API responsible for handling Notes related resources. 
-</div>
-
-### What is Inkdown?
-
-Inkdown is an in-browser text editor for your simple productive notes needs.
-It is created with PHP for fast, lightweight, and efficient note-taking experience.
-
-<b>Checkout the repository!<b>
-<a href="https://github.com/Ciezo/inkdown">Inkdown text-editor</a>
-
-<b><a href="https://inkdown-editor-85260732e1ff.herokuapp.com/">Try Inkdown </a>now!<b>
+**I have a lot to learn and I love it! 😊**
